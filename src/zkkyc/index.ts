@@ -13,6 +13,7 @@ export type {
 
 // ── Orchestrators ────────────────────────────────────────────────────────────
 
+export { createBvnFlow } from "./orchestrators/bvn";
 export {
 	BVN_OTP_METHODS,
 	DEFAULT_RECLAIM_PROVIDER_IDS,
@@ -20,7 +21,6 @@ export {
 	SIMPLE_KYC_DEFAULT_TENANT,
 	ZK_PASSPORT_APP_LINKS,
 } from "./orchestrators/constants";
-export { createBvnFlow } from "./orchestrators/bvn";
 export { createReclaimFlow } from "./orchestrators/reclaim";
 export { createSimpleKycFlow, resumeSimpleKycFlow } from "./orchestrators/simple-kyc";
 export type {
@@ -35,9 +35,11 @@ export type {
 	BvnSendOtpParams,
 	BvnSession,
 	ReclaimFlowParams,
+	ReclaimLocale,
 	ReclaimProofResult,
 	ReclaimSession,
 	ReclaimStatus,
+	ReclaimTenant,
 	SimpleKycAttestation,
 	SimpleKycFlowParams,
 	SimpleKycSession,
